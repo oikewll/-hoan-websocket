@@ -1,0 +1,42 @@
+{
+  "name": "@hoan/websocket",
+  "version": "1.0.3",
+  "description": "websocket plugin",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env ENV=prod rollup -c",
+    "build:prod": "cross-env ENV=prod rollup -c",
+    "build:dev": "cross-env ENV=dev rollup -c",
+    "deploy": "npm publish",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oikewll/-hoan-websocket.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oikewll/-hoan-websocket/issues"
+  },
+  "homepage": "https://github.com/oikewll/-hoan-websocket-/tree/master#websocket%E6%8F%92%E4%BB%B6%E5%B0%81%E8%A3%85",
+  "keywords": [
+    "websocket",
+    "socket.io",
+    "socket-client"
+  ],
+  "author": "oikewll@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/plugin-proposal-private-methods": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "babel-preset-stage-0": "^6.24.1",
+    "cross-env": "^7.0.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-cleaner": "^1.0.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-uglify": "^6.0.4"
+  }
+}

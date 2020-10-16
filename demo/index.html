@@ -1,0 +1,40 @@
+<html>
+<title>websocket</title>
+<head>
+    <meta data-n-head="1" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <script src="../lib/HoanSocket-1.1.0.js"></script>
+</head>
+<body>
+    <a href="javascript:;" id="send">下一轮</a>
+    <ol id="log"></ol>
+    <script>
+        var $ = function(id){
+            return document.getElementById(id);
+        }
+        var body = document.getElementsByTagName("body")[0];
+
+        const ws = new HoanSocket('wss://ws.langrensha.game/?token=4cb8ee36be0f30a993a4d28c5e4f54c7');
+        ws.create({
+            isDebug: true,
+            reconnectTime: 2000,
+            heartbeatIdleTime: 15000,
+            heartbeatInterval: 5000,
+            onmessage: (event)=>{
+                dataObj = JSON.parse(event.data);
+                console.log(dataObj);
+                var li = document.createElement('li');
+                li.className = 'item';
+                li.innerHTML = event.data;
+                $('log').appendChild(li);
+            } 
+        });
+
+        $('send').onclick = function(){
+            ws.send({
+                ct: 'game',
+                ac: 'next_rounds'
+            })
+        }
+    </script>
+</body>
+</html>
