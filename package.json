@@ -1,5 +1,5 @@
 {
-  "name": "@hoan/websocket",
+  "name": "hoan-websocket",
   "version": "1.0.3",
   "description": "websocket plugin",
   "main": "index.js",

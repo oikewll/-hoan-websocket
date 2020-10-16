@@ -1,5 +1,6 @@
 # WebSocket插件封装
-
+> 平时常用的业务情景封装了下websocket；
+>
 > 兼容低版本JS，基于rollup/babel build/minify；
 > 
 > 支持CMD、AMD、commonJS、ES6方式引入使用；
@@ -12,10 +13,10 @@ $ cd -hoan-websocket && npm i
 $ npm run build
 
 // es6
-$ npm install @hoan/websocket -S
+$ npm install hoan-websocket -S
 
 // or
-$ yarn add @hoan/websocket -S
+$ yarn add hoan-websocket -S
 ```
 
 ## 引入
@@ -23,11 +24,11 @@ $ yarn add @hoan/websocket -S
 // CDN
 <script src="./lib/HoanSocket-{version}.js"></script>
 
-// es6
-import HoanSocket from '@hoan/websocket';
+// ES6
+import HoanSocket from 'hoan-websocket';
 
-// nodejs
-const HoanSocket = require('@hoan/websocket')
+// CommonJS
+const HoanSocket = require('hoan-websocket')
 ```
 
 ## 使用
@@ -58,7 +59,7 @@ plugins: [
 ```
 ```
 // websocket.js
-import HoanSocket from '@hoan/websocket';
+import HoanSocket from 'hoan-websocket';
 const socket = new HoanSocket('{wsurl}');
 socket.create({
     ...
